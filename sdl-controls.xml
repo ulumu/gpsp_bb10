@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<emulation version="1">
+
+<dpad x="2" y="180" width="130" height="130">
+<label x="0" y="0" width="130" height="130" image="gba_dpad.png"/>
+</dpad>
+
+<key x="150" y="240" width="32" height="32" sym="13" scancode="13">
+<label x="0" y="0" width="32" height="32" image="select.png" />
+</key>
+
+<key x="150" y="280" width="32" height="32" sym="08" scancode="08">
+<label x="0" y="0" width="32" height="32" image="start-button.png" />
+</key>
+
+<key x="348" y="228" width="64" height="64" sym="109" scancode="109">
+<label x="0" y="0" width="64" height="64" image="gba_B.png" />
+</key>
+
+<key x="416" y="188" width="64" height="64" sym="108" scancode="108">
+<label x="0" y="0" width="64" height="64" image="gba_A.png" />
+</key>
+
+<key x="10" y="140" width="32" height="32" sym="113" scancode="113">
+<label x="0" y="0" width="32" height="32" image="gba_L.png" />
+</key>
+
+<key x="440" y="140" width="32" height="32" sym="112" scancode="112">
+<label x="0" y="0" width="32" height="32" image="gba_R.png" />
+</key>
+
+</emulation>

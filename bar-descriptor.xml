@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--
+
+   Copyright (c) 2011-2013 BlackBerry Limited.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+-->
+<qnx xmlns="http://www.qnx.com/schemas/application/1.0">
+
+<!-- BlackBerry® 10 application descriptor file.
+
+    Specifies parameters for identifying, installing, and launching native applications on BlackBerry® 10 OS.
+-->
+
+    <!-- A universally unique application identifier. Must be unique across all BlackBerry applications.
+         Using a reverse DNS-style name as the id is recommended. (Eg. com.example.ExampleApplication.) Required. -->
+    <id>com.example.gpsp</id>
+
+    <!-- The name that is displayed in the BlackBerry application installer.
+         May have multiple values for each language. See samples or xsd schema file. Optional. -->
+    <name>gpsp_bb</name>
+
+    <!-- A string value of the format <0-999>.<0-999>.<0-999> that represents application version which can be used to check for application upgrade.
+         Values can also be 1-part or 2-part. It is not necessary to have a 3-part value.
+         An updated version of application must have a versionNumber value higher than the previous version. Required. -->
+    <versionNumber>1.0.0</versionNumber>
+
+    <!-- Fourth digit segment of the package version. First three segments are taken from the
+         <versionNumber> element.  Must be an integer from 0 to 2^16-1 -->
+    <buildId>2</buildId>
+
+    <!-- Description, displayed in the BlackBerry application installer.
+         May have multiple values for each language. See samples or xsd schema file. Optional. -->
+    <description>The gpsp application ported for BB10</description>
+
+    <!--  Name of author which is used for signing. Must match the developer name of your developer certificate. -->
+    <author>ULUMU</author>
+    <category>core.games</category>
+    <authorId>gYAAgGDqpxdfrshwrJslHt83lH4</authorId>
+    <icon>
+       <image>gba-icon.png</image>
+    </icon>
+    <permission>access_shared</permission>
+    <asset path="assets">assets</asset>
+    <asset path="src/game_config.txt">game_config.txt</asset>
+    <asset path="src/icon.png">icon.png</asset>
+    <asset path="media/A.png">A.png</asset>
+    <asset path="media/B.png">B.png</asset>
+    <asset path="media/cheat.png">cheat.png</asset>
+    <asset path="media/dpad_pce.png">dpad_pce.png</asset>
+    <asset path="media/ffwd.png">ffwd.png</asset>
+    <asset path="media/fps.png">fps.png</asset>
+    <asset path="media/gba_A.png">gba_A.png</asset>
+    <asset path="media/gba_B.png">gba_B.png</asset>
+    <asset path="media/gba_dpad.png">gba_dpad.png</asset>
+    <asset path="media/gba_L.png">gba_L.png</asset>
+    <asset path="media/gba_R.png">gba_R.png</asset>
+    <asset path="media/gba_splash.png">gba_splash.png</asset>
+    <asset path="media/gba-icon.png">gba-icon.png</asset>
+    <asset path="media/keyconfig.png">keyconfig.png</asset>
+    <asset path="media/loadstate.png">loadstate.png</asset>
+    <asset path="media/resize.png">resize.png</asset>
+    <asset path="media/savestate.png">savestate.png</asset>
+    <asset path="media/select.png">select.png</asset>
+    <asset path="media/sndtoggle.png">sndtoggle.png</asset>
+    <asset path="media/start-button.png">start-button.png</asset>
+    <asset path="sdl-controls.xml">sdl-controls.xml</asset>
+    <asset path="sdl-controls-keyboard.xml">sdl-controls-keyboard.xml</asset>
+    <asset path="sdl-topmenu-controls.xml">sdl-topmenu-controls.xml</asset>
+    <asset path="src/bb10/gpsp.cfg">gpsp.cfg</asset>
+    <configuration name="Device-Debug">
+       <platformArchitecture>armle-v7</platformArchitecture>
+       <asset path="Device-Debug/gpsp" entry="true" type="Qnx/Elf">gpsp</asset>
+       <asset path="${workspace_loc:/SDL12/Device-Debug/libSDL12.so}" type="Qnx/Elf">lib/libSDL12.so</asset>
+       <asset path="${workspace_loc:/TouchControlOverlay/Device-Debug/libTouchControlOverlay.so}" type="Qnx/Elf">lib/libTouchControlOverlay.so</asset>
+    </configuration>
+    <configuration name="Device-Release">
+       <platformArchitecture>armle-v7</platformArchitecture>
+       <asset path="Device-Release/gpsp" entry="true" type="Qnx/Elf">gpsp</asset>
+       <asset path="${workspace_loc:/SDL12/Device-Release/libSDL12.so}" type="Qnx/Elf">lib/libSDL12.so</asset>
+       <asset path="${workspace_loc:/TouchControlOverlay/Device-Release/libTouchControlOverlay.so}" type="Qnx/Elf">lib/libTouchControlOverlay.so</asset>
+    </configuration>
+    <configuration name="Device-Profile">
+       <platformArchitecture>armle-v7</platformArchitecture>
+       <asset path="Device-Profile/gpsp" entry="true" type="Qnx/Elf">gpsp</asset>
+    </configuration>
+    <configuration name="Device-Coverage">
+       <platformArchitecture>armle-v7</platformArchitecture>
+       <asset path="Device-Coverage/gpsp" entry="true" type="Qnx/Elf">gpsp</asset>
+    </configuration>
+    <configuration name="Simulator-Debug">
+       <platformArchitecture>x86</platformArchitecture>
+       <asset path="Simulator-Debug/gpsp" entry="true" type="Qnx/Elf">gpsp</asset>
+       <asset path="${workspace_loc:/SDL12/Simulator-Debug/libSDL12.so}" type="Qnx/Elf">lib/libSDL12.so</asset>
+       <asset path="${workspace_loc:/TouchControlOverlay/Simulator/libTouchControlOverlay.so}" type="Qnx/Elf">lib/libTouchControlOverlay.so</asset>
+    </configuration>
+    <configuration name="Simulator-Profile">
+       <platformArchitecture>x86</platformArchitecture>
+       <asset path="Simulator-Profile/gpsp" entry="true" type="Qnx/Elf">gpsp</asset>
+    </configuration>
+    <configuration name="Simulator-Coverage">
+       <platformArchitecture>x86</platformArchitecture>
+       <asset path="Simulator-Coverage/gpsp" entry="true" type="Qnx/Elf">gpsp</asset>
+    </configuration>
+
+    <!--  Unique author ID assigned by signing authority. Required if using debug tokens. -->
+    <!-- <authorId>ABC1234YjsnUk235h</authorId> -->
+
+    <initialWindow>
+        <aspectRatio>landscape</aspectRatio>
+        <autoOrients>false</autoOrients>
+        <systemChrome>none</systemChrome>
+        <transparent>false</transparent>
+    </initialWindow>
+
+    <!--  The icon for the application. -->
+
+    <!-- Ensure that shared libraries in the package are found at run-time. -->
+    <env var="LD_LIBRARY_PATH" value="app/native/lib"/>
+
+</qnx>
