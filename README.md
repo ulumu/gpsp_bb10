@@ -18,3 +18,5 @@ gpsp Configuration file
 - User can select GPU filter type
 - User can enable debug logging when reporting problems
 
+Binary link
+https://app.box.com/s/oylizwfv3cmgpk61aywjoqawo1b9x0rb
